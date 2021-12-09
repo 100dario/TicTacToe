@@ -84,3 +84,5 @@ elif t==8:
        print('\nTied game :(')
        tied=True
        end=True</code></pre>
+                     
+Note that at the end of every comparison statment there is a ``!=' '`` condition. Since the program is looking for three equal values, three blank strings (``' '``) could meet some of the winning conditions, end the game and generate a false winner. (This was my favorite part of the code to realize after many tests 😅)
