@@ -9,7 +9,7 @@ This code is an introductory Tic Tac Toe game developed in Python.
 ### How the code works?   
 As you know, Tic Tac Toe is won by placing three equals symbols in a row. It could be horizontally, vertically or diagonally.   
 In every turn, each player has the oportunity to place their symbol in the empty spaces of the board. No symbols can be placed in already filled spaces.    
-so far, we need to:   
+So far, we need to:   
 1. Create a board able to change every turn to show the status of the game.
 2. Check if a selected position on the board is filled or if it is available to place a symbol.
 3. Check the winning conditions.    
@@ -49,9 +49,9 @@ Now, we need to make sure that a player selects only an empty position on the bo
        else:
               print('This position is already filled. Please, enter another number.')</code></pre>              
               
-The variable ``playing`` holds a string 'X' or 'O' that changes every turn depending in the player (you can see how this works in the full code) and is used to fill the board with the corresponding symbol.            
+The variable ``playing`` holds a string 'X' or 'O' that changes every turn depending on the player (you can see how this works in the full code) and is used to fill the board with the corresponding symbol.            
 
-Our final main portion of code is to check the winning conditions. Three same symbols in a row are necessary to win the game, so the program is going to check row by row, including diagnonals, and compare all the values of a single row to make sure that they are the same symbol. Also, the game can end in a draw after all the positions on the board are filled and no winning conditions are met. 
+Our final main portion of code is to check the winning conditions. Three same symbols in a row are necessary to win the game, so the program is going to check row by row, including diagnonals, and compare all the values of a single row to make sure that they are all the same symbol. Also, the game can end in a draw after all the positions on the board are filled and no winning conditions are met. 
 
 ![winning](https://user-images.githubusercontent.com/95108679/145432475-4fc620ce-98f2-41e2-b607-01862994195a.png)             
 
@@ -85,4 +85,10 @@ elif t==8:
        tied=True
        end=True</code></pre>
                      
-Note that at the end of every comparison statment there is a ``!=' '`` condition. Since the program is looking for three equal values, three blank strings (``' '``) could meet some of the winning conditions, end the game and generate a false winner. (This was my favorite part of the code to realize after many tests 😅)
+Note that at the end of every comparison statment there is a ``!=' '`` condition. Since the program is looking for three equal values, three blank strings (``' '``) could meet some of the winning conditions, end the game and generate a false winner (This was my favorite part of the code to realize after many tests 😅).         
+
+
+                            
+There are other two small features: a score system that add points to the winner of every round, and a the ability to change the initial player every new match. Feel free to check the details in the full code, along with the complete estructure that makes the game functional.              
+
+Good luck! 
